@@ -11,10 +11,10 @@
 
 ## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-  git add .
-  git commit -m 'commit message'
-  git push
+## A quick look at the top-level files and directories you'll see in a Gatsby project.
+  ## git add .
+  ## git commit -m 'commit message'
+  ## git pushgatsby build
     .
     ├──   HEADER
     ├──   ABOUT ME

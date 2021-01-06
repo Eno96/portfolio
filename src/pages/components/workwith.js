@@ -11,23 +11,41 @@ import Phpmysql from "../assets/workwith/phpmysql.svg";
 import Bootstrap from "../assets/workwith/bootstrap.svg";
 import Swift from "../assets/workwith/swift.svg";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import OwlCarousel from 'react-owl-carousel';
-
-const mobileThreshold = 700;
 
 export default function WorkWith() {
-
-    var itemshere = 4;
-    if (typeof window !== "undefined") {
-        if (window.innerWidth > mobileThreshold) {
-            itemshere = 4;
-        }else{
-            itemshere = 2;      
-        }
-    }
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        autoplaySpeed: 3000,
+        fadeIn: false,
+        autoplay: true,
+        pauseOnHover: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      };
 
   return (
     <section className = "work_with">
@@ -36,17 +54,17 @@ export default function WorkWith() {
             <div className = "row">
                 <div className = "col-sm-10 offset-1">
                     <h2>Worked with<span></span></h2>
-                    <OwlCarousel className="owl-theme" loop items={itemshere}  margin={0}>
-                        <div className ="item"><img src={Laravel} className = "img-fluid" alt = "Laravel" /></div>
-                        <div className ="item"><img src={Bootstrap} className = "img-fluid" alt = "Bootstrap" /></div>
-                        <div className ="item"><img src={ReactNative} className = "img-fluid" alt = "ReactNative" /></div>
-                        <div className ="item"><img src={Swift} className = "img-fluid" alt = "Swift" /></div>
-                        <div className ="item"><img src={Vuejs} className = "img-fluid" alt = "Vue.js" /></div>
-                        <div className ="item"><img src={Adobexd} className = "img-fluid" alt = "Adobe XD" /></div>
-                        <div className ="item"><img src={Htmlcssjs} className = "img-fluid" alt = "Html Css Js" /></div>
-                        <div className ="item"><img src={Phpmysql} className = "img-fluid" alt = "Php Mysql" /></div>
-                        <div className ="item"><img src={Jquery} className = "img-fluid" alt = "Jquery" /></div>
-                    </OwlCarousel>
+                    <Slider {...settings}>
+                        <div ><img src={Laravel} className = "img-fluid" alt = "Laravel" /></div>
+                        <div ><img src={Bootstrap} className = "img-fluid" alt = "Bootstrap" /></div>
+                        <div ><img src={ReactNative} className = "img-fluid" alt = "ReactNative" /></div>
+                        <div ><img src={Swift} className = "img-fluid" alt = "Swift" /></div>
+                        <div ><img src={Vuejs} className = "img-fluid" alt = "Vue.js" /></div>
+                        <div ><img src={Adobexd} className = "img-fluid" alt = "Adobe XD" /></div>
+                        <div ><img src={Htmlcssjs} className = "img-fluid" alt = "Html Css Js" /></div>
+                        <div ><img src={Phpmysql} className = "img-fluid" alt = "Php Mysql" /></div>
+                        <div ><img src={Jquery} className = "img-fluid" alt = "Jquery" /></div>
+                    </Slider>
                 </div>
             </div>
         </div>

@@ -56,11 +56,11 @@ class Header extends React.Component {
 
         {/* PHOTO DECOS */}
         <div className="headerMiddle" id="scene">
-            <div data-depth="0.6"><img src={BackgroundMiddle} className="img-fluid"/></div>
+            <div data-depth="0.6"><img src={BackgroundMiddle} className="img-fluid" alt = "bg"/></div>
 
         </div>
         
-        <div className="headerMiddleMobile"><img src={IconsForMobile} className="img-fluid"/></div>
+        <div className="headerMiddleMobile"><img src={IconsForMobile} className="img-fluid" alt = "bg"/></div>
         <div className="headerBtm"></div>
       </section>
     )

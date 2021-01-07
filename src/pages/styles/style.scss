@@ -6,6 +6,7 @@ body {
   scroll-behavior: smooth;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: overlay;
 }
 * {
   box-sizing: border-box;
@@ -50,6 +51,14 @@ a {
   padding: 17px 40px !important;
   border-radius: 25px;
   font-size: 1.175rem;
+  transition: 0.2s;
+  transition: all 300ms ease;
+}
+
+.nav-link:hover {
+  transition: 0.2s;
+  transition: all 300ms ease;
+  transform: scale(1.05);
 }
 
 .nav-item.active{
@@ -158,14 +167,29 @@ a {
     border-radius: 25px;
     text-align: center;
     display: inline;
-    padding: 10px 55px;
+    padding: 15px 65px;
     margin-right: 20px;
+    transition: all 0.3s ease-in-out;
   }
   a.hireme{
     background: $primaryColor;
     color: #fff;
   }
+  a.hireme:hover {
+    color: #fff;
+    background: $mainGold;
+    border: 1px solid $mainGold;
+    transition: all 0.3s ease-in-out;
+  }
+  a.portfolio:hover {
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to right, #fff 50%, $mainGold 50%) right;
+    background-size: 200%;
+    color: #fff;
+    border: 1px solid $mainGold;
+  }
 }
+
 
 .headerIcons{
   margin: 0px 0px 50px 0px;
@@ -234,6 +258,12 @@ a {
     padding: 10px 55px;
     margin-right: 20px;
     float: right;
+  }
+  a:hover{
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to right, #fff 50%, #D2A50A 50%) right;
+    background-size: 200%;
+    color: #fff;
   }
 }
 .aboutmephoto{
@@ -328,6 +358,48 @@ a {
   }
 }
 
+
+
+/* card */
+.card{
+  transition:0.5s;
+  cursor:pointer;
+  position: relative;
+  border: 0px;
+}
+.card-title i:hover{
+  transform: scale(1.25) rotate(100deg);
+  color:#18d4ca;
+}
+
+.card:hover, .icons svg:hover{
+  transform: scale(1.05);
+}
+
+.card::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+.card::before {
+  transform-origin: left top;
+}
+.card::after {
+  transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+/* end card */
+
+
 // *********************************************************
 //                          FOOTER
 // *********************************************************
@@ -399,6 +471,16 @@ a {
   }
 }
 
+.footerhrefs a:hover{
+  transform: scale(1.05);
+}
+.success{
+  margin: auto;
+  margin-top: 20px;
+}
+.text-success:hover{
+  transform: scale(1.05);
+}
 // *********************************************************
 //                          MEDIA
 // *********************************************************
@@ -565,6 +647,12 @@ a {
     width: 60%;
   }
 }
+@media only screen and (max-width: 1440px)  {
+  a.hireme,a.portfolio{
+    padding: 10px 55px;
+  }
+}
+
 @media only screen and (max-width: 991px)  {
   .nav-link, .nav-link.last {
     background: #1072ED;

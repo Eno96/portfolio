@@ -8,7 +8,7 @@ export default function AboutMe() {
         <div className = "rightblue"></div>
         <div className = "container-fluid" id = "aboutme">
           <div className = "row pt-140">
-            <div className = "col-lg-5 offset-md-1 col-sm-11 aboutmetext aboutmetext">
+            <div className = "col-lg-5 offset-1 col-sm-11 aboutmetext">
               <h2>About Me</h2>
               <img src={CoffeDrinkImg} className="img-fluid d-lg-none" title = "☕️ morning coffee is the best!" alt = "☕️ morning coffee is the best!" />
               <p> Recent college graduate (Bachelor engineer of Electrical engineering) from University of Bihać where I gathered experience with Matlab, Python, C++, Arduino, Java. </p>
@@ -17,8 +17,8 @@ export default function AboutMe() {
               <a href="/mycv.pdf">Download CV</a>
             </div>            
             <div className = "col-lg-5 aboutmephoto">
-              <span className="d-md-none d-lg-block"></span>
-              <img src={CoffeDrinkImg} className="img-fluid d-md-none d-lg-block" title = "☕️ morning coffee is the best!" alt = "☕️ morning coffee is the best!" />
+              <span className="d-none d-lg-block"></span>
+              <img src={CoffeDrinkImg} className="img-fluid d-none d-lg-block" title = "☕️ morning coffee is the best!" alt = "☕️ morning coffee is the best!" />
             </div>
           </div>
         </div>

@@ -3,6 +3,10 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+console.log(process.env.SENDGRID_API_KEY)
 const { createProxyMiddleware } = require("http-proxy-middleware") //v1.x.x
 
 module.exports = {
@@ -28,6 +32,9 @@ module.exports = {
       },
       {
         resolve: `gatsby-plugin-sass`
+      },
+      {
+        resolve: `gatsby-plugin-react-helmet`
       }
   ]
 }

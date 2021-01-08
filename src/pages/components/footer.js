@@ -62,7 +62,7 @@ class Footer extends React.Component {
                   </form>
                   {this.state.success &&
                   <div className = "col-2 text-center success">
-                    <FontAwesomeIcon class="text-success" icon={["fas", "check-circle"]}  />
+                    <FontAwesomeIcon icon={["fas", "check-circle"]}  />
                   </div>
                   }
                 </div>

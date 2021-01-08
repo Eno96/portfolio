@@ -94,7 +94,11 @@ a {
 .navbar-toggler{
   margin-top: 20px;
   margin-left: 20px;
-  border-color:  $primaryColor;
+  outline: none;
+}
+.navbar-toggler:focus{
+  border: 1px solid $primaryColor!important;
+  outline: none!important;
 }
 .img-fluid {
   position: relative;
@@ -112,7 +116,7 @@ a {
 
 .header_bg{
     height: 100vh;
-    background: url('/static/background.svg');
+    background: url('../images/background.svg');
     background-size: cover;
     position: relative;
 }
@@ -135,7 +139,7 @@ a {
   right: 0;
   height: 177px;
   width: 1113px;
-  background: url('/static/backgroundbtm.svg');
+  background: url('../images/backgroundbtm.svg');
   background-size: cover;
 }
 
@@ -170,6 +174,8 @@ a {
     padding: 15px 65px;
     margin-right: 20px;
     transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-bottom: 10px;
   }
   a.hireme{
     background: $primaryColor;
@@ -203,6 +209,9 @@ a {
 @media (max-width: 700px){
   .headerMiddle, .headerMiddle img{
       display: none;
+  }  
+  .header_bg{
+    height: 120vh;
   }
 }
 
@@ -645,11 +654,6 @@ a {
   .headerBtm {
     height: 120px;
     width: 60%;
-  }
-}
-@media only screen and (max-width: 1440px)  {
-  a.hireme,a.portfolio{
-    padding: 10px 55px;
   }
 }
 

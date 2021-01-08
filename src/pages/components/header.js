@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import IconsForMobile from "../assets/iconsline.svg";
 import BackgroundMiddle from "../assets/backgroundmiddle.svg";
 import Parallax from 'parallax-js';
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {collapseShow: false};
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
   componentDidMount() {
     var scene = document.getElementById('scene');
     var parallaxInstance = new Parallax(scene);
+  }
+
+  handleChange() {
+    this.setState({collapseShow: !this.state.collapseShow});
   }
   
   render () {
@@ -16,10 +27,12 @@ class Header extends React.Component {
         {/* TOP NAVBAR */}
         <nav className="navbar navbar-expand-lg navbar-light bg-none">
           <div className="container-fluid">
-            <button className="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">  
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarResponsive">
+            <div className="navbar-header">
+              <button className="navbar-toggler" onClick={this.handleChange} type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">  
+                <span className="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div className={this.state.collapseShow ? 'collapse navbar-collapse show' : 'collapse navbar-collapse'} id="navbarResponsive">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
                   <a className="nav-link active" aria-current="page" href="#aboutme"><span></span>About</a>
@@ -37,6 +50,7 @@ class Header extends React.Component {
             </div>
           </div>
         </nav>
+        
         {/* TEXT DESCRIPTION HEADER */}
         <div className="headerLeft">
           <h2>Hello, I am </h2> 

@@ -115,7 +115,7 @@ a {
 }
 
 .header_bg{
-    height: 100vh;
+    min-height: 100vh;
     background: url('../images/background.svg');
     background-size: cover;
     position: relative;
@@ -123,9 +123,6 @@ a {
 
 .headerMiddle, .headerMiddle img{
   cursor: pointer;
-  position: absolute;
-  top: 10%;
-  right: 5%;
   height: 807px;
   z-index: 1;
   min-width: 647px;
@@ -144,9 +141,8 @@ a {
 }
 
 .headerLeft{
-  position: absolute;
-  top: 20%;
-  left: 8%;
+  position: relative;
+  margin-top: 5%;
   h1{
     color: $primaryColor;
     font-size: 8.125rem;
@@ -206,14 +202,6 @@ a {
   }
 }
 
-@media (max-width: 700px){
-  .headerMiddle, .headerMiddle img{
-      display: none;
-  }  
-  .header_bg{
-    height: 120vh;
-  }
-}
 
 
 // *********************************************************
@@ -494,12 +482,6 @@ a {
 //                          MEDIA
 // *********************************************************
 
-@media only screen and (min-width: 2220px) {
-  .header_bg {
-    height: 75vh;
-  }
-}
-
 @media only screen and (max-width: 1920px) and (min-width: 1024px)  {
   .aboutmephoto span {
     width: 227px;
@@ -534,9 +516,6 @@ a {
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1024px)  {
-  .headerLeft {
-    top: 24%;
-  }
   .headerMiddle, .headerMiddle img{
     top: 15%;
     right: 30px;
@@ -598,11 +577,6 @@ a {
   .headerLeft p.gold {
     max-width: fit-content;
   }
-  .headerLeft {
-      position: absolute;
-      top: 23%;
-      left: 6%;
-  }
 }
 
 @media only screen and (max-width: 949px) and (min-width: 818px)  {
@@ -624,14 +598,11 @@ a {
     height: 120px;
     width: 60%;
   }
-  .headerLeft {
-    top: 24%;
-  }
 }
 
 @media only screen and (max-width: 818px) and (min-width: 700px)  {
   .headerMiddle, .headerMiddle img{
-    top: 15%;
+    top: 50px;
     right: 15px;
     height: 522px;
     min-width: 425px;
@@ -648,15 +619,21 @@ a {
     height: 110px;
     width: 60%;
   }
-  .headerLeft {
-      top: 24%;
-  }
   .headerBtm {
     height: 120px;
     width: 60%;
   }
 }
 
+
+@media only screen and (max-height: 1050px)  {
+  .headerBtm{
+    position: relative;
+    margin-top: 5%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
 @media only screen and (max-width: 991px)  {
   .nav-link, .nav-link.last {
     background: #1072ED;
@@ -680,7 +657,7 @@ a {
   }  
   .headerMiddleMobile {
     display: block;
-    top: 15%;
+    top: 11%;
     right: 15px;
     position: absolute;
   }
@@ -690,9 +667,6 @@ a {
   }
   .headerLeft p.gold {
     font-size: 1.325rem;
-  }
-  .headerLeft {
-    top: 24%;
   }
   .headerBtm {
     height: 130px;
@@ -719,6 +693,32 @@ a {
         left: 12rem;
       }
   }
+  .headerLeft{
+    margin-top: 40%;
+  }
 }
 
 
+@media only screen and (min-width: 2050px)  {
+  .headerLeft {
+    margin-top: 20%;
+  }
+  .headerLeft h2 {
+    font-size: 3.375rem;
+  }
+  .headerLeft h1 {
+    font-size: 9.125rem;
+  }
+  .headerMiddle{
+    margin-top: 20%;
+  }
+  .headerLeft p {
+    font-size: 2.1rem;
+  }
+  .headerLeft a.hireme, .headerLeft a.portfolio, .aboutmetext a{
+    height: 80px;
+    border-radius: 80px;
+    padding: 24px 100px;
+    font-size: 1.5rem;
+  }
+}

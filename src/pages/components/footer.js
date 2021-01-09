@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Footer extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {email: "" , success: false};
+      this.state = {email: "" , success: false, loader: false};
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,28 +17,27 @@ class Footer extends React.Component {
     }
 
     async handleSubmit(event) {
+      this.setState({loader: true});
       event.preventDefault();
       try{
         const response = await fetch("/.netlify/functions/sendmail", {
           method: "POST",
           body: this.state.email,
         })
-
-        console.log(JSON.stringify(response));
     
         if (!response.ok) {
           //not 200 response
-          console.log('Not Success');
           return
         }
-        
-        console.log('Success');
         this.setState({success: true});
+        this.setState({email: ""});
+        this.setState({loader: false});
         //all OK
         
       } catch(e){
+        this.setState({loader: true});
         //error
-        console.log(e);
+        alert(e);
       }
     }
 
@@ -58,11 +57,13 @@ class Footer extends React.Component {
                       <label htmlFor="staticEmail2" className ="sr-only">Email</label>
                       <input type="email" className ="form-control" id="staticEmail2" value={this.state.email} placeholder="Enter your email"  onChange={this.handleChange}/>
                     </div>
-                    <button type="submit" className ="btn btn-primary mb-2">Hire Me</button>
+                    <button type="submit" className ="btn btn-primary mb-2">
+                      {this.state.loader ? <FontAwesomeIcon className = " fa-2x fa-pulse" icon={["fas", "spinner"]}  /> : 'Hire Me'}
+                    </button>   
                   </form>
                   {this.state.success &&
                   <div className = "col-2 text-center success">
-                    <FontAwesomeIcon icon={["fas", "check-circle"]}  />
+                    <FontAwesomeIcon className = "text-success fa-5x" icon={["fas", "check-circle"]}  />
                   </div>
                   }
                 </div>

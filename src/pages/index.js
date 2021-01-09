@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/style.scss";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEnvelopeSquare, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelopeSquare, faCheckCircle, faSpinner} from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin , faFacebookSquare, faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 
 
@@ -19,7 +19,7 @@ import Logo from "./assets/logo.png";
 
 
 
-library.add(faLinkedin, faFacebookSquare, faGithubSquare , faEnvelopeSquare, faCheckCircle);
+library.add(faLinkedin, faFacebookSquare, faGithubSquare , faEnvelopeSquare, faCheckCircle, faSpinner);
 
 
 export default function Home() {

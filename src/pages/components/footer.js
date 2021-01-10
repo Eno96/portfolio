@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import myCV from '../assets/mycv.pdf';
 
 
 
@@ -75,15 +76,23 @@ class Footer extends React.Component {
             <div className = "container-fluid footerfluid">
               <div className = "row pt-5">
 
-                <div className = "col-sm-4 text-center">
+                <div className = "col-sm-3 text-center">
                   <h2>Portofolio</h2>
                 </div>
-                <div className = "col-sm-4 text-center footerhrefs">
+
+
+                <div className = "col-sm-2 text-center footerhrefs">
                   <a  href='#aboutme'> About me </a>
-                  <a  href='#portofolio'> Portfolio </a>
-                  <a  href='/mycv.pdf'> Download CV </a>
                 </div>
-                <div className = "col-sm-4 text-center footerIcons">
+                <div className = "col-sm-2 text-center footerhrefs">
+                  <a  href='#portofolio'> Portfolio </a>
+                </div>
+                <div className = "col-sm-2 text-center footerhrefs">
+                  <a  href={myCV}> Download CV </a>
+                </div>
+
+
+                <div className = "col-sm-3 text-center footerIcons">
                   <a className="icons" href='https://www.linkedin.com/in/enes-dedic6/'> <FontAwesomeIcon icon={["fab", "linkedin"]} /> </a>
                   <a className="icons" href='https://www.facebook.com/enes.dedic1/'> <FontAwesomeIcon icon={["fab", "facebook-square"]} /> </a>
                   <a className="icons" href='https://github.com/Eno96'> <FontAwesomeIcon icon={["fab", "github-square"]} /> </a>

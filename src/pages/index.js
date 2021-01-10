@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/style.scss";
 
@@ -18,33 +19,35 @@ import { Helmet } from "react-helmet";
 import Logo from "./assets/logo.png";
 
 
-
 library.add(faLinkedin, faFacebookSquare, faGithubSquare , faEnvelopeSquare, faCheckCircle, faSpinner);
 
+class Home extends React.Component {
+  render () {
+      return (
+      <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-export default function Home() {
-  return (
-    <div>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <title>Portofolio | Enes</title>
 
-        <title>Portofolio | Enes</title>
-
-        <meta name="description" content="Experienced young Developer with passion for mobile & web development!" />
-        <meta name="keywords" content="Web Design, Web Development, Portofolio, Mobile Development, Enes"/>
-        <meta property="og:title" content="Portofolio | Enes" />
-        <meta property="og:description" content="Experienced young Developer with passion for mobile & web development!" />
-        <meta property="og:image" content={Logo} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Portofolio | Enes" />
-        <meta property="og:url" content="https://enes-portofolio.netlify.app" />
-      </Helmet>
-      <Header />
-      <AboutMe />
-      <WorkWith />
-      <Portofolio />
-      <Footer />
-    </div>
-  )
+          <meta name="description" content="Experienced young Developer with passion for mobile & web development!" />
+          <meta name="keywords" content="Web Design, Web Development, Portofolio, Mobile Development, Enes"/>
+          <meta property="og:title" content="Portofolio | Enes" />
+          <meta property="og:description" content="Experienced young Developer with passion for mobile & web development!" />
+          <meta property="og:image" content={Logo} />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Portofolio | Enes" />
+          <meta property="og:url" content="https://enes-portofolio.netlify.app" />
+        </Helmet>
+        <Header />
+        <AboutMe />
+        <WorkWith />
+        <Portofolio />
+        <Footer />
+      </div>
+    )
+  }
 }
+
+export default Home

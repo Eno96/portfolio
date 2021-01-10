@@ -134,7 +134,7 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 177px;
+  height: 137px;
   width: 1113px;
   background: url('../images/backgroundbtm.svg');
   background-size: cover;
@@ -446,12 +446,6 @@ a {
     margin-top: 10px;
     display: inline-block;
   }
-  .footerhrefs a:first-child{
-    float: left;
-  }
-  .footerhrefs a:last-child{
-    float: right;
-  }
   h2{
     font-weight: bold;
     font-size: 2.1875rem;
@@ -696,6 +690,13 @@ a {
   .headerLeft{
     margin-top: 40%;
   }
+  .footerhrefs{
+    margin-top: 20px;
+  }
+  .footerIcons{
+    margin: 50px 0px;
+  }
+
 }
 
 

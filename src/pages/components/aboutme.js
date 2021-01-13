@@ -6,7 +6,7 @@ import myCV from '../assets/mycv.pdf';
 
 export default function AboutMe() {
   return (
-    <section className = "about_me">
+    <section className = "about_me" data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
         <div className = "rightblue"></div>
         <div className = "container-fluid" id = "aboutme">
           <div className = "row pt-140">

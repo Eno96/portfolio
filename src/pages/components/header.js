@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import IconsForMobile from "../assets/iconsline.svg";
 import BackgroundMiddle from "../assets/backgroundmiddle.svg";
@@ -15,6 +15,7 @@ class Header extends React.Component {
   componentDidMount() {
     var scene = document.getElementById('scene');
     var parallaxInstance = new Parallax(scene);
+    
   }
 
   handleChange() {

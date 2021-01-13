@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,6 +14,7 @@ import AboutMe from "./components/aboutme";
 import WorkWith from "./components/workwith";
 import Portofolio from "./components/portofolio";
 import Footer from "./components/footer";
+import PageTager from "./components/pagetager";
 import { Helmet } from "react-helmet";
 
 import Logo from "./assets/logo.png";
@@ -21,10 +22,19 @@ import Logo from "./assets/logo.png";
 
 library.add(faLinkedin, faFacebookSquare, faGithubSquare , faEnvelopeSquare, faCheckCircle, faSpinner);
 
+
 class Home extends React.Component {
+  constructor(props){
+    super(props)
+    
+  }
+
+  componentDidMount () {
+  }
+
   render () {
       return (
-      <div>
+      <div className = "enesportofolio">
         <Helmet>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -40,11 +50,12 @@ class Home extends React.Component {
           <meta property="og:site_name" content="Portofolio | Enes" />
           <meta property="og:url" content="https://enes-portofolio.netlify.app" />
         </Helmet>
-        <Header />
+        <Header/>
         <AboutMe />
         <WorkWith />
         <Portofolio />
         <Footer />
+        <PageTager />
       </div>
     )
   }

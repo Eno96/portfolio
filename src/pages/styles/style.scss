@@ -31,7 +31,30 @@ a {
   transition-timing-function: ease;
 }
 
+.enesportofolio{
+  position: relative;
+}
 
+.navigation {
+  position: fixed;
+  right: 35px;
+  top: 50%;
+  text-align: center;
+  span{
+    display: block;
+    font-size: 1.25rem;
+    color: #8D8D8D;
+  }    
+  span.active{
+    color: #D2A50A;
+  }  
+  span:nth-child(even) {
+    border: 1px solid #707070;
+    height: 1px;
+    margin: 5px 0px;
+    opacity: 0.2;
+  }
+}
 // *********************************************************
 //                         HEADER
 // *********************************************************
@@ -534,11 +557,29 @@ a {
   }
 }
 
+@media only screen and (max-width: 1300px) and (min-width: 700px)  {
+  .navigation {
+    right: 25px;
+    span{
+      display: block;
+      font-size: 1rem;
+      color: #8D8D8D;
+    }    
+  }
+}
+
 @media only screen and (max-width: 1440px) and (min-width: 1210px)  {
   .headerLeft p {
     color: #1072ED;
     font-size: 1.025rem;
     font-weight: normal;
+  }
+  .navigation {
+    span{
+      display: block;
+      font-size: 1.15rem;
+      color: #8D8D8D;
+    }    
   }
 }
 
@@ -655,7 +696,9 @@ a {
     right: 15px;
     position: absolute;
   }
-  
+  .navigation {
+    display: none;
+  }
   .headerLeft h1 {
     font-size: 5.225rem;
   }

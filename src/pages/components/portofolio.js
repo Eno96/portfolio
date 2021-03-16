@@ -25,7 +25,7 @@ export default function Portofolio() {
 
               <div className = "row">
                   <div className = "col-sm card">
-                    <a href="#" target="_blank" rel="noreferrer"><img src={Moviearc} className = "img-fluid" alt = "MovieArc"/></a>
+                    <a href="https://moviearc.netlify.app/" target="_blank" rel="noreferrer"><img src={Moviearc} className = "img-fluid" alt = "MovieArc"/></a>
                     <h3>MovieArc</h3>
                     <p>New React Native app in progress.</p>
                     <p>Suggesting a film depending on the mood and genre.</p>

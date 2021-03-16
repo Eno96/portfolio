@@ -30,6 +30,9 @@ a {
   text-decoration: none!important;
   transition-timing-function: ease;
 }
+img:focus{
+  outline: none!important;
+}
 
 .enesportofolio{
   position: relative;

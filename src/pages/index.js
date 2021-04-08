@@ -39,7 +39,7 @@ class Home extends React.Component {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-          <title>Portofolio | Enes</title>
+          <title>Portfolio | Enes</title>
 
           <meta name="description" content="Experienced young Developer with passion for mobile & web development!" />
           <meta name="keywords" content="Web Design, Web Development, Portofolio, Mobile Development, Enes"/>
@@ -47,7 +47,7 @@ class Home extends React.Component {
           <meta property="og:description" content="Experienced young Developer with passion for mobile & web development!" />
           <meta property="og:image" content={Logo} />
           <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="Portofolio | Enes" />
+          <meta property="og:site_name" content="Portfolio | Enes" />
           <meta property="og:url" content="https://enes-portofolio.netlify.app" />
         </Helmet>
         <Header/>
